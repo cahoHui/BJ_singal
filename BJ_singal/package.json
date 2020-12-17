@@ -1,0 +1,11 @@
+{
+  "name": "bj_singal",
+  "version": "1.0.0",
+  "description": "北京市交通信号控制管理平台",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chaohui",
+  "license": "ISC"
+}
