@@ -1,6 +1,7 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -18,6 +19,21 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'css-loader' }, { loader: 'sass-loader' }
+        ]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|mp4|mov)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+          }
+        }]
       }
     ],
   },
@@ -27,6 +43,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
+    new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       favicon: '',
       template: 'template.html',
@@ -34,6 +51,9 @@ module.exports = {
       inject: true,
       hash: true,
     }),
-    // new CleanWebpackPlugin(),
-  ]
+    new CleanWebpackPlugin(),
+  ],
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  }
 }

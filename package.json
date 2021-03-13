@@ -4,14 +4,17 @@
   "description": "北京市交通信号控制管理平台",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+    "build": "webpack -p --colors --progress",
+    "dev": "webpack-dev-server --devtool eval --colors --hot --open --content-base build"
   },
   "author": "chaohui",
   "license": "ISC",
   "dependencies": {
+    "antd": "^4.9.4",
+    "axios": "^0.21.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "webpack": "^4.30.0"
   },
   "devDependencies": {
@@ -24,7 +27,14 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.1.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }
