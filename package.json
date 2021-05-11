@@ -15,6 +15,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
+    "sass-loader": "^7.3.1",
     "webpack": "^4.30.0"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "node-sass": "^4.14.1",
-    "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.1",

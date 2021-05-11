@@ -9,6 +9,7 @@ import { configProvider } from 'antd'
 import zhCN from 'antd/es/locale/zh_CN'
 
 import Login from './src/Login/Login'
+import Home from './src/home/homePage'
 
 export default function BasicRouter() {
   return (
@@ -16,6 +17,7 @@ export default function BasicRouter() {
       <Switch>
         <Redirect exact from="/" to="/login" />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/home" component={Home} />
       </Switch>
     </Router>
   )
